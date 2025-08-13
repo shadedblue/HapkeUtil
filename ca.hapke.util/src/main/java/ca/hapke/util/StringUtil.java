@@ -24,6 +24,20 @@ public abstract class StringUtil {
 	
 		return buffer.toString();
 	}
+	
+
+	public static String join(char[] pieces, String separator) {
+		StringBuilder buffer = new StringBuilder();
+	
+		for (int i = 0; i < pieces.length; i++) {
+			buffer.append(pieces[i]);
+			if (i < pieces.length - 1) {
+				buffer.append(separator);
+			}
+		}
+	
+		return buffer.toString();
+	}
 
 	/**
 	 * Stolen from jdk.internal.joptsimple.internal.Strings
